@@ -1,9 +1,7 @@
-version: '3.9'
-
 services:
   ms-mascotas:
-    image: lucianobc/ms-mascotas:latest   # <- reemplazar TU_USUARIO
-    # build: .                             # <- descomentar solo para build local
+    image: lucianobc/ms-mascotas:latest
+    # build: .
     container_name: ms-mascotas
     restart: unless-stopped
     ports:
@@ -72,4 +70,4 @@ volumes:
 
 networks:
   sanos-y-salvos-net:
-    external: true
+    driver: bridge
